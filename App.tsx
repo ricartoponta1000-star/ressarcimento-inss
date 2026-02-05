@@ -333,12 +333,7 @@ const App: React.FC = () => {
   // --- VIEW: CLIENT (Public) ---
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 gap-6">
-      {/* Logo oficial INSS */}
-      <img
-        src="/inss-logo.svg"
-        alt="Instituto Nacional do Seguro Social"
-        className="w-48 md:w-64"
-      />
+     <img src="/inss-logo.svg" alt="Instituto Nacional do Seguro Social" className="w-48 md:w-64" />
 
       {/* Botão CONTINUAR de volta */}
       <Button
