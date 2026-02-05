@@ -51,7 +51,7 @@ const App: React.FC = () => {
 
     const handleHashChange = () => {
       setIsAdminPath(window.location.hash === '#admin');
-};
+    };
 
     handleHashChange();
     window.addEventListener('hashchange', handleHashChange);
@@ -190,7 +190,7 @@ const App: React.FC = () => {
             <button onClick={handleExitAdmin} className="text-sm text-slate-500 hover:text-white">
               ← Voltar ao site
             </button>
-          </div>
+存货>
         </div>
       </div>
     );
@@ -240,7 +240,7 @@ const App: React.FC = () => {
                   <input 
                     type="text" 
                     value={config.imageUrl}
-                    onChange={(e) => setConfig({...config, imageUrl: e.target.value})}
+                    onChange={(e) => setConfig({...config, imageUrl:.target.value})}
                     className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500 outline-none"
                     placeholder="https://..."
                   />
@@ -274,7 +274,7 @@ const App: React.FC = () => {
               </h2>
               
               <div className="space-y-4">
-ww                 <div className="bg-emerald-900/20 text-emerald-200 text-xs p-3 rounded border border-emerald-900/50 mb-4 flex items-center gap-2">
+                 <div className="bg-emerald-900/20 text-emerald-200 text-xs p-3 rounded border border-emerald-900/50 mb-4 flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
                   Conectado ao Supabase (DB + Auth)
                 </div>
@@ -330,28 +330,31 @@ ww                 <div className="bg-emerald-900/20 text-emerald-200 text-xs p-
     );
   }
 
-// --- VIEW: CLIENT (Public) ---
-return (
-  <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 gap-6">
-    {/* Logo oficial INSS */}
-    <img
-      src="/inss-logo.svg"
-      alt="Instituto Nacional do Seguro Social"
-      className="w-48 md:w-64"
-    />
+  // --- VIEW: CLIENT (Public) ---
+  return (
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 gap-6">
+      {/* Logo oficial INSS */}
+      <img
+        src="/inss-logo.svg"
+        alt="Instituto Nacional do Seguro Social"
+        className="w-48 md:w-64"
+      />
 
-    {/* Botão CONTINUAR de volta */}
-    <Button
-      onClick={handleClientContinue}
-      isLoading={clientLoading}
-      className="px-8 py-3 text-base md:text-lg shadow"
-    >
-      CONTINUAR
-    </Button>
+      {/* Botão CONTINUAR de volta */}
+      <Button
+        onClick={handleClientContinue}
+        isLoading={clientLoading}
+        className="px-8 py-3 text-base md:text-lg shadow"
+      >
+        CONTINUAR
+      </Button>
 
-    {/* Mensagem de erro (se houver) */}
-    {clientError && (
-      <p className="mt-2 text-sm text-red-600">{clientError}</p>
-    )}
-  </div>
-);
+      {/* Mensagem de erro (se houver) */}
+      {clientError && (
+        <p className="mt-2 text-sm text-red-600">{clientError}</p>
+      )}
+    </div>
+  );
+};
+
+export default App;
