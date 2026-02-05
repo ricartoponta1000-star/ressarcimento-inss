@@ -190,7 +190,7 @@ const App: React.FC = () => {
             <button onClick={handleExitAdmin} className="text-sm text-slate-500 hover:text-white">
               ← Voltar ao site
             </button>
-存货>
+          </div>
         </div>
       </div>
     );
@@ -240,7 +240,7 @@ const App: React.FC = () => {
                   <input 
                     type="text" 
                     value={config.imageUrl}
-                    onChange={(e) => setConfig({...config, imageUrl:.target.value})}
+                    onChange={(e) => setConfig({...config, imageUrl: e.target.value})}
                     className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500 outline-none"
                     placeholder="https://..."
                   />
@@ -332,22 +332,56 @@ const App: React.FC = () => {
 
   // --- VIEW: CLIENT (Public) ---
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 gap-6">
-     <img src="/inss-logo.svg" alt="Instituto Nacional do Seguro Social" className="w-48 md:w-64" />
+    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-3xl"></div>
+      </div>
 
-      {/* Botão CONTINUAR de volta */}
-      <Button
-        onClick={handleClientContinue}
-        isLoading={clientLoading}
-        className="px-8 py-3 text-base md:text-lg shadow"
-      >
-        CONTINUAR
-      </Button>
+      <main className="relative z-10 w-full max-w-md bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 rounded-2xl shadow-2xl flex flex-col items-center text-center space-y-8 animate-fade-in-up">
+        
+        {/* Company Image - Only if set */}
+        {config.imageUrl && (
+          <div className="w-48 h-32 flex items-center justify-center mb-4">
+              <img 
+                src={config.imageUrl} 
+                alt="Logo" 
+                className="max-w-full max-h-full object-contain drop-shadow-lg"
+              />
+          </div>
+        )}
 
-      {/* Mensagem de erro (se houver) */}
-      {clientError && (
-        <p className="mt-2 text-sm text-red-600">{clientError}</p>
-      )}
+        {/* Caption - Only if set */}
+        {config.caption && (
+          <div className="space-y-4">
+            <h1 className="text-xl font-medium text-slate-100 leading-relaxed">
+              {config.caption}
+            </h1>
+            <div className="h-1 w-16 bg-blue-500 mx-auto rounded-full opacity-50"></div>
+          </div>
+        )}
+
+        {/* Action */}
+        <div className="w-full pt-4">
+          <Button 
+            onClick={handleClientContinue} 
+            isLoading={clientLoading}
+            className="w-full text-lg py-4 shadow-blue-900/20"
+          >
+            CONTINUAR
+          </Button>
+          
+          {clientError && (
+            <p className="mt-4 text-sm text-red-400 bg-red-950/30 p-2 rounded animate-pulse">
+              {clientError}
+            </p>
+          )}
+        </div>
+
+      </main>
+
+      {/* Hidden Admin Access - No visual footer text */}
     </div>
   );
 };
