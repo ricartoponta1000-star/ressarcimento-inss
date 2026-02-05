@@ -251,7 +251,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 gap-6">
       <img
-        src="/inss-logo.png"
+        src="/inss-logo-v2.png"
         alt="Instituto Nacional do Seguro Social"
         className="w-48 md:w-64"
       />
