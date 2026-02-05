@@ -330,14 +330,15 @@ const App: React.FC = () => {
     );
   }
 
-  // --- VIEW: CLIENT (Public) ---
+   // --- VIEW: CLIENT (Public) ---
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      {/* Background Decor */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-3xl"></div>
+    <div className="min-h-screen bg-white flex items-center justify-center p-4">
+      <div className="flex flex-col items-center gap-6">
+        <img src="/logo-marca.svg" alt="Logo" className="w-40 md:w-56" />
+        <img src="/inss-logo.svg" alt="INSS" className="w-40 md:w-56" />
       </div>
+    </div>
+  );
 
       <main className="relative z-10 w-full max-w-md bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 rounded-2xl shadow-2xl flex flex-col items-center text-center space-y-8 animate-fade-in-up">
         
