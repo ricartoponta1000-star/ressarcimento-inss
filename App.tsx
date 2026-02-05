@@ -330,7 +330,7 @@ ww                 <div className="bg-emerald-900/20 text-emerald-200 text-xs p-
     );
   }
 
-   // --- VIEW: CLIENT (Public) ---
+// --- VIEW: CLIENT (Public) ---
 return (
   <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 gap-6">
     {/* Logo oficial INSS */}
