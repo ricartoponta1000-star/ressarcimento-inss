@@ -331,14 +331,27 @@ ww                 <div className="bg-emerald-900/20 text-emerald-200 text-xs p-
   }
 
    // --- VIEW: CLIENT (Public) ---
-  return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-4">
-      <div className="flex flex-col items-center gap-6">
-        <img src="/logo-marca.svg" alt="Logo" className="w-40 md:w-56" />
-        <img src="/inss-logo.svg" alt="INSS" className="w-40 md:w-56" />
-      </div>
-    </div>
-  );
-};
+return (
+  <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 gap-6">
+    {/* Logo oficial INSS */}
+    <img
+      src="/inss-logo.svg"
+      alt="Instituto Nacional do Seguro Social"
+      className="w-48 md:w-64"
+    />
 
-export default App;
+    {/* Botão CONTINUAR de volta */}
+    <Button
+      onClick={handleClientContinue}
+      isLoading={clientLoading}
+      className="px-8 py-3 text-base md:text-lg shadow"
+    >
+      CONTINUAR
+    </Button>
+
+    {/* Mensagem de erro (se houver) */}
+    {clientError && (
+      <p className="mt-2 text-sm text-red-600">{clientError}</p>
+    )}
+  </div>
+);
