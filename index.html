@@ -6,47 +6,18 @@
     <title>LinkFlow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-          sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        background-color: #0f172a; /* slate-900 */
-        color: white;
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translate3d(0, 40px, 0);
-        }
-        to {
-          opacity: 1;
-          transform: translate3d(0, 0, 0);
-        }
-      }
-      .animate-fade-in-up {
-        animation-duration: 0.8s;
-        animation-fill-mode: both;
-        animation-name: fadeInUp;
-      }
+      body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#0f172a;color:#fff}
+      @keyframes fadeInInUp{from{opacity:0;transform:translate30,40px,0)}to{opacity:1;transform:translate(0,0,0)}}
+      .animate-fade-in-up{animation-duration:.8s;animation-fill-mode:both;animation-name:fadeInUp}
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.93.3"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <link rel="stylesheet" href="/index.css">
+  </head>
   <body>
+    <!-- Logo INSS -->
+    <div class="flex justify-center pt-6">
+      <img src="/inss-logo.png" alt="INSS" class="h-16 md:h-20">
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
