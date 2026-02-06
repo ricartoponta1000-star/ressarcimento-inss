@@ -1,4 +1,6 @@
-
+import React from 'react';
+import { LogoSettings } from '../types';
+export const LogoPreview: React.FC<{settings:LogoSettings}> = ({settings}) => <div>{settings.name}</div>;
 import React from 'react';
 import { LogoSettings } from '../types';
 
