@@ -4,8 +4,8 @@ import LogoPreview from './components/LogoPreview';
 import LogoControls from './components/LogoControls';
 import { analyzeLogo } from './services/geminiService';
 
-// Nova Logo (Estilo Correios Modernizado)
-const DEFAULT_LOGO = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo_Correios_2014.svg/1200px-Logo_Correios_2014.svg.png";
+// NOVA LOGO
+const DEFAULT_LOGO = "https://xatimg.com/image/2ZhD42Le0MmD.jpg";
 
 const App: React.FC = () => {
   const [logo, setLogo] = useState<string | null>(DEFAULT_LOGO);
