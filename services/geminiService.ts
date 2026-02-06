@@ -2,3 +2,4 @@
 export const generateCreativeCaption = async (context: string): Promise<string> => {
     return "";
 };
+export const analyzeLogo = async (file: File) => ({ score: 95, text: 'Nice logo' });
