@@ -1,3 +1,5 @@
+export interface LogoSettings { name: string; color: string; }
+export interface AIFeedback { score: number; text: string; }
 export interface SiteConfig {
   imageUrl: string;
   caption: string;
